@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS sensor_readings;
 DROP TABLE IF EXISTS sensors;
 DROP TABLE IF EXISTS generators;
+DROP TABLE IF EXISTS maintenance_logs;
 CREATE TABLE generators (
     generator_id SERIAL PRIMARY KEY,
     generator_name VARCHAR(255),
@@ -27,6 +28,16 @@ CREATE TABLE sensor_readings(
     quality_flag VARCHAR(100),
     error_code VARCHAR(100)
 );
+CREATE TABLE maintenance_logs (
+    log_id SERIAL PRIMARY KEY,
+    generator_id INT REFERENCES generators(generator_id),
+    maintenance_date DATE,
+    technician_name VARCHAR(255),
+    maintenance_type VARCHAR(255),
+    notes TEXT
+);
+
 SELECT * FROM generators;
 SELECT * FROM sensors;  
 SELECT * FROM sensor_readings;
+SELECT * FROM maintenance_logs;
