@@ -3,11 +3,7 @@ DROP TABLE IF EXISTS sensors;
 DROP TABLE IF EXISTS maintenance_logs;
 DROP TABLE IF EXISTS alarm_logs;
 DROP TABLE IF EXISTS generators;
-<<<<<<< HEAD
 
-=======
-DROP TABLE IF EXISTS maintenance_logs;
->>>>>>> 3b69d99f917b3feccb289e3aca8fef0ddcd10f78
 CREATE TABLE generators (
     generator_id SERIAL PRIMARY KEY,
     generator_name VARCHAR(255),
@@ -34,7 +30,6 @@ CREATE TABLE sensor_readings(
     quality_flag VARCHAR(100),
     error_code VARCHAR(100)
 );
-<<<<<<< HEAD
 CREATE TABLE alarm_logs (
     alarm_id SERIAL PRIMARY KEY,
     generator_id INT REFERENCES generators(generator_id),
@@ -45,8 +40,6 @@ CREATE TABLE alarm_logs (
     alarm_trigger_time TIMESTAMP,
     alarm_clear_time TIMESTAMP
 );
-=======
->>>>>>> 3b69d99f917b3feccb289e3aca8fef0ddcd10f78
 CREATE TABLE maintenance_logs (
     log_id SERIAL PRIMARY KEY,
     generator_id INT REFERENCES generators(generator_id),
@@ -56,11 +49,9 @@ CREATE TABLE maintenance_logs (
     notes TEXT
 );
 
+
 SELECT * FROM generators;
 SELECT * FROM sensors;  
 SELECT * FROM sensor_readings;
 SELECT * FROM maintenance_logs;
-<<<<<<< HEAD
 SELECT * FROM alarm_logs;
-=======
->>>>>>> 3b69d99f917b3feccb289e3aca8fef0ddcd10f78
