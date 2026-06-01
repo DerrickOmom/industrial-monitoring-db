@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "IndustrialDB",
+            "group": "localhost",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "root"
+        }
+    ]
+}
