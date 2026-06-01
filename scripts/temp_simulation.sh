@@ -3,7 +3,7 @@ DB_USER="postgres"
 DB_NAME="postgres"   
 DB_HOST="localhost"
 DB_PORT="5432"
-export PGPASSWORD="root"
+export PGPASSWORD=""
 # Tells Git Bash EXACTLY where Windows hid your PostgreSQL engine
 PSQL_EXE="/c/Program Files/PostgreSQL/18/bin/psql.exe"
 
